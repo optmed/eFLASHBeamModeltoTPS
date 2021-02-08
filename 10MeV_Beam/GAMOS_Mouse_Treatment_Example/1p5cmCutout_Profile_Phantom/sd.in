@@ -1,0 +1,80 @@
+# RANDOMIZE RESULTS
+/gamos/random/setSeeds 1001 1001
+
+# SET SIMULATION GLOBAL VARIABLES
+/control/verbose 0
+/run/verbose 0
+/gamos/analysis/fileFormat CSV
+
+# READ GEOMETRY FROM TEXT FILE
+/gamos/setParam GmGeometryFromText:FileName world.geom
+/gamos/geometry GmGeometryFromText
+
+
+# Visualize the Distribution
+#/gamos/setParam GmGeneratorScanVis:DrawBorderNames 1
+#/gamos/setParam GmGeneratorScanVis:NPixels 1000
+#/gamos/setParam GmGeneratorScanVis:ScanWorldMinX -100
+#/gamos/setParam GmGeneratorScanVis:ScanWorldMaxX 100
+#/gamos/setParam GmGeneratorScanVis:ScanWorldMinY -100
+#/gamos/setParam GmGeneratorScanVis:ScanWorldMaxY 100
+#/gamos/setParam GmGeneratorScanVis:ScanWorldMinZ -100
+#/gamos/setParam GmGeneratorScanVis:ScanWorldMaxZ 100
+#/gamos/setParam GmGeneratorScanVis:ScanParams YZ 25. 0.01 10.*deg 90.*deg
+#/gamos/generator GmGeneratorScanVis*
+
+# SET OF THE VISUALISATION CHARACTERISTICS
+#/vis/scene/create
+#/vis/open VRML2FILE
+#/vis/viewer/flush
+#/vis/viewer/set/viewpointThetaPhi 10 120 deg
+#/vis/viewer/zoom 1
+#/vis/viewer/pan -10  40 cm
+#/vis/scene/add/trajectories
+#/vis/scene/endOfEventAction accumulate
+#/vis/viewer/update
+#/vis/viewer/flush
+
+
+# DECLARE BASIC EM PHYSICS PROCESSES
+/gamos/physicsList GmEMPhysics
+/run/initialize
+
+/gamos/setParam GmScoringUA:FirstEvent 1
+/gamos/setParam GmScoringUA:EachNEvent 100000
+#/gamos/setParam GmPhysicsAddCerenkov:TrackSecondariesFirst 1
+#/gamos/setParam	G4OpCerenkov:Method	interpolate
+#/gamos/physics/addPhysics cerenkov
+#/gamos/physics/addPhysics tissue-optics
+
+# ADD SIMULATION SOURCE
+/gamos/generator GmGenerator
+/gamos/generator/addSingleParticleSource mySource e- 10.0*MeV
+/gamos/generator/energyDist mySource GmGenerDistEnergyGaussian 10.0*MeV 0.5*MeV
+#/gamos/generator/positionDist mySource GmGenerDistPositionLineGaussian 180.0*deg 0.06369967725*cm 0.0*cm 0.0*cm 0.0*cm 0.0 0.0 -1.0
+/gamos/generator/positionDist mySource GmGenerDistPositionDiscGaussian 0.5*mm 0 0 0 0 0 1
+#/gamos/generator/directionDist mySource GmGenerDistDirectionConst 0.0 0.0 1.0
+/gamos/generator/directionDist mySource GmGenerDistDirectionCone 0 0 1 3.9*deg
+#/gamos/generator/directionDist mySource GmGenerDistDirectionConeGaussian 0 0 1 3.*deg
+
+## LIST DIFFERENT DATA RECORDING MECHANISMS
+/gamos/scoring/createMFDetector detector voxel
+
+# DOSE SCORER
+/gamos/scoring/addScorer2MFD DoseScorer GmG4PSDoseDeposit detector
+/gamos/scoring/scoreErrors DoseScorer FALSE
+/gamos/scoring/printer DosePrinter GmPSPrinterCSVFile
+/gamos/scoring/addPrinter2Scorer DosePrinter DoseScorer
+#/gamos/scoring/printByEvent DosePrinter FALSE
+
+
+# USER ACTIONS
+/gamos/userAction GmCountTracksUA
+/gamos/setParam GmCountTracksUA:EachNEvent 100000
+#/gamos/userAction GmCountProcessesUA
+
+#/vis/scene/endOfEventAction accumulate 50000
+#/control/execute /home/rxz/GAMOS4/GAMOS.4.0.0/examples/visVRML2FILE.in
+/run/beamOn 100000
+
+#/gamos/base/printParametersUsage 2 

@@ -1,0 +1,988 @@
+:MIXT "ICRU46_Adipose tissue Newborn :1" 1 7
+  G4_H 0.111
+  G4_C 0.205
+  G4_O 0.009
+  G4_N 0.672
+  G4_Na 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Adipose tissue Newborn :2" 0.99 7
+  G4_H 0.111
+  G4_C 0.297
+  G4_O 0.009
+  G4_N 0.58
+  G4_Na 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Adipose tissue Newborn :3" 0.98 7
+  G4_H 0.112
+  G4_C 0.39
+  G4_O 0.009
+  G4_N 0.486
+  G4_Na 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Adipose tissue Infant (2 days-10 months) :1" 0.99 7
+  G4_H 0.111
+  G4_C 0.31
+  G4_O 0.011
+  G4_N 0.565
+  G4_Na 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Adipose tissue Infant (2 days-10 months) :2" 0.97 7
+  G4_H 0.112
+  G4_C 0.392
+  G4_O 0.009
+  G4_N 0.484
+  G4_Na 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Adipose tissue Infant (2 days-10 months) :3" 0.96 7
+  G4_H 0.114
+  G4_C 0.473
+  G4_O 0.006
+  G4_N 0.404
+  G4_Na 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Adipose tissue Child (1-18 years) :1" 0.98 7
+  G4_H 0.112
+  G4_C 0.347
+  G4_O 0.008
+  G4_N 0.53
+  G4_Na 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Adipose tissue Child (1-18 years) :2" 0.96 7
+  G4_H 0.113
+  G4_C 0.445
+  G4_O 0.006
+  G4_N 0.433
+  G4_Na 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Adipose tissue Child (1-18 years) :3" 0.95 7
+  G4_H 0.115
+  G4_C 0.543
+  G4_O 0.005
+  G4_N 0.334
+  G4_Na 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Adipose tissue Adult :1" 0.97 7
+  G4_H 0.112
+  G4_C 0.517
+  G4_O 0.013
+  G4_N 0.355
+  G4_Na 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Adipose tissue Adult :2" 0.95 7
+  G4_H 0.114
+  G4_C 0.598
+  G4_O 0.007
+  G4_N 0.278
+  G4_Na 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Adipose tissue Adult :3" 0.93 7
+  G4_H 0.116
+  G4_C 0.681
+  G4_O 0.002
+  G4_N 0.198
+  G4_Na 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Adipose tissue Lipoma" 0.98 7
+  G4_H 0.109
+  G4_C 0.719
+  G4_O 0.03
+  G4_N 0.138
+  G4_Na 0.001
+  G4_S 0.002
+  G4_Cl 0.001
+:MIXT "ICRU46_Average soft tissue Adult ICRU-33 (lCRU, 1980)" 1 4
+  G4_H 0.101
+  G4_C 0.111
+  G4_O 0.026
+  G4_N 0.762
+:MIXT "ICRU46_Average soft tissue Adult ICRU-44 (male) (ICRU, 1989)" 1.03 9
+  G4_H 0.105
+  G4_C 0.256
+  G4_O 0.027
+  G4_N 0.602
+  G4_Na 0.001
+  G4_P 0.002
+  G4_S 0.003
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Average soft tissue Adult ICRU-44 (female) (ICRU, 1989)" 1.02 9
+  G4_H 0.106
+  G4_C 0.315
+  G4_O 0.024
+  G4_N 0.547
+  G4_Na 0.001
+  G4_P 0.002
+  G4_S 0.002
+  G4_Cl 0.001
+  G4_K 0.002
+:MIXT "ICRU46_Blood Fetus (20 weeks)" 1.04 10
+  G4_H 0.105
+  G4_C 0.073
+  G4_O 0.022
+  G4_N 0.792
+  G4_Na 0.001
+  G4_P 0.001
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.002
+  G4_Fe 0.001
+:MIXT "ICRU46_Blood Newborn" 1.07 10
+  G4_H 0.1
+  G4_C 0.131
+  G4_O 0.04
+  G4_N 0.72
+  G4_Na 0.001
+  G4_P 0.001
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_K 0.002
+  G4_Fe 0.001
+:MIXT "ICRU46_Blood Adulta" 1.06 10
+  G4_H 0.102
+  G4_C 0.11
+  G4_O 0.033
+  G4_N 0.745
+  G4_Na 0.001
+  G4_P 0.001
+  G4_S 0.002
+  G4_Cl 0.003
+  G4_K 0.002
+  G4_Fe 0.001
+:MIXT "ICRU46_Bone mineral-hydroxyapatite" 3.225 4
+  G4_H 0.002
+  G4_N 0.414
+  G4_P 0.185
+  G4_Ca 0.399
+:MIXT "ICRU46_Brain Fetus (14 weeks)" 1.02 8
+  G4_H 0.109
+  G4_C 0.033
+  G4_O 0.007
+  G4_N 0.842
+  G4_Na 0.002
+  G4_P 0.002
+  G4_Cl 0.003
+  G4_K 0.002
+:MIXT "ICRU46_Brain Newborn" 1.03 9
+  G4_H 0.108
+  G4_C 0.055
+  G4_O 0.011
+  G4_N 0.816
+  G4_Na 0.002
+  G4_P 0.003
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Brain Infant (18 months)" 1.03 9
+  G4_H 0.107
+  G4_C 0.091
+  G4_O 0.016
+  G4_N 0.776
+  G4_Na 0.002
+  G4_P 0.003
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Brain Adult" 1.04 9
+  G4_H 0.107
+  G4_C 0.145
+  G4_O 0.022
+  G4_N 0.712
+  G4_Na 0.002
+  G4_P 0.004
+  G4_S 0.002
+  G4_Cl 0.003
+  G4_K 0.003
+:MIXT "ICRU46_Breast-calcifications" 3.06 6
+  G4_H 0.003
+  G4_C 0.016
+  G4_O 0.005
+  G4_N 0.407
+  G4_P 0.187
+  G4_Ca 0.382
+:MIXT "ICRU46_Breast-mammary gland Adult :1" 0.99 8
+  G4_H 0.109
+  G4_C 0.506
+  G4_O 0.023
+  G4_N 0.358
+  G4_Na 0.001
+  G4_P 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Breast-mammary gland Adult :2" 1.02 8
+  G4_H 0.106
+  G4_C 0.332
+  G4_O 0.03
+  G4_N 0.527
+  G4_Na 0.001
+  G4_P 0.001
+  G4_S 0.002
+  G4_Cl 0.001
+:MIXT "ICRU46_Breast-mammary gland Adult :3" 1.06 8
+  G4_H 0.102
+  G4_C 0.158
+  G4_O 0.037
+  G4_N 0.698
+  G4_Na 0.001
+  G4_P 0.001
+  G4_S 0.002
+  G4_Cl 0.001
+:MIXT "ICRU46_Breast (whole)-50/50 (water/ lipid)" 0.96 3
+  G4_H 0.115
+  G4_C 0.387
+  G4_N 0.498
+:MIXT "ICRU46_Breast (whole)-33/67 (water/lipid)" 0.64 3
+  G4_H 0.116
+  G4_C 0.519
+  G4_N 0.365
+:MIXT "ICRU46_Carbohydrate" 1.56 3
+  G4_H 0.062
+  G4_C 0.445
+  G4_N 0.493
+:MIXT "ICRU46_Cell nucleus" 1. 6
+  G4_H 0.106
+  G4_C 0.09
+  G4_O 0.032
+  G4_N 0.742
+  G4_P 0.026
+  G4_S 0.004
+:MIXT "ICRU46_Eye lens Adult" 1.07 8
+  G4_H 0.096
+  G4_C 0.195
+  G4_O 0.057
+  G4_N 0.646
+  G4_Na 0.001
+  G4_P 0.001
+  G4_S 0.003
+  G4_Cl 0.001
+:MIXT "ICRU46_allstones-cholesterol" 1.075 4
+  G4_H 0.118
+  G4_C 0.794
+  G4_O 0.005
+  G4_N 0.083
+:MIXT "ICRU46_I tract (intestine) Adult" 1.03 9
+  G4_H 0.106
+  G4_C 0.115
+  G4_O 0.022
+  G4_N 0.751
+  G4_Na 0.001
+  G4_P 0.001
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.001
+:MIXT "ICRU46_Heart Fetus (17 to 40 weeks)" 1.04 9
+  G4_H 0.106
+  G4_C 0.075
+  G4_O 0.018
+  G4_N 0.793
+  G4_Na 0.002
+  G4_P 0.001
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Heart Child (2 years)" 1.04 9
+  G4_H 0.105
+  G4_C 0.088
+  G4_O 0.022
+  G4_N 0.777
+  G4_Na 0.001
+  G4_P 0.002
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Heart Child (4 to 18 years)" 1.04 9
+  G4_H 0.105
+  G4_C 0.104
+  G4_O 0.025
+  G4_N 0.757
+  G4_Na 0.001
+  G4_P 0.002
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.003
+:MIXT "ICRU46_Heart Adult (healthy)" 1.05 9
+  G4_H 0.104
+  G4_C 0.139
+  G4_O 0.029
+  G4_N 0.718
+  G4_Na 0.001
+  G4_P 0.002
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_K 0.003
+:MIXT "ICRU46_Heart Adult (fatty)" 1.04 9
+  G4_H 0.103
+  G4_C 0.182
+  G4_O 0.031
+  G4_N 0.674
+  G4_Na 0.001
+  G4_P 0.002
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_K 0.003
+:MIXT "ICRU46_Heart (blood-filled) Adult" 1.06 10
+  G4_H 0.103
+  G4_C 0.121
+  G4_O 0.032
+  G4_N 0.734
+  G4_Na 0.001
+  G4_P 0.001
+  G4_S 0.002
+  G4_Cl 0.003
+  G4_K 0.002
+  G4_Fe 0.001
+:MIXT "ICRU46_Kidney Fetus (17 to 40 weeks)" 1.03 9
+  G4_H 0.107
+  G4_C 0.064
+  G4_O 0.016
+  G4_N 0.804
+  G4_Na 0.002
+  G4_P 0.002
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Kidney Child (2 years)" 1.04 9
+  G4_H 0.106
+  G4_C 0.094
+  G4_O 0.021
+  G4_N 0.77
+  G4_Na 0.002
+  G4_P 0.002
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Kidney Adult" 1.05 10
+  G4_H 0.103
+  G4_C 0.132
+  G4_O 0.03
+  G4_N 0.724
+  G4_Na 0.002
+  G4_P 0.002
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_K 0.002
+  G4_Ca 0.001
+:MIXT "ICRU46_Lipid" 0.92 3
+  G4_H 0.118
+  G4_C 0.773
+  G4_N 0.109
+:MIXT "ICRU46_Liver Fetus (17 to 40 weeks)" 1.04 9
+  G4_H 0.105
+  G4_C 0.091
+  G4_O 0.021
+  G4_N 0.774
+  G4_Na 0.002
+  G4_P 0.002
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Liver Child (1 year)" 1.05 9
+  G4_H 0.103
+  G4_C 0.126
+  G4_O 0.027
+  G4_N 0.733
+  G4_Na 0.001
+  G4_P 0.003
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_K 0.003
+:MIXT "ICRU46_Liver Adult (healthy)" 1.06 9
+  G4_H 0.102
+  G4_C 0.139
+  G4_O 0.03
+  G4_N 0.716
+  G4_Na 0.002
+  G4_P 0.003
+  G4_S 0.003
+  G4_Cl 0.002
+  G4_K 0.003
+:MIXT "ICRU46_Liver Adult (cirrhotic)" 1.04 9
+  G4_H 0.104
+  G4_C 0.23
+  G4_O 0.024
+  G4_N 0.63
+  G4_Na 0.002
+  G4_P 0.003
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_K 0.003
+:MIXT "ICRU46_Liver Adult (fatty)" 1.05 9
+  G4_H 0.103
+  G4_C 0.186
+  G4_O 0.028
+  G4_N 0.671
+  G4_Na 0.002
+  G4_P 0.002
+  G4_S 0.003
+  G4_Cl 0.002
+  G4_K 0.003
+:MIXT "ICRU46_Lung Fetus (17 to 40 weeks)" 1.04 9
+  G4_H 0.106
+  G4_C 0.076
+  G4_O 0.018
+  G4_N 0.792
+  G4_Na 0.002
+  G4_P 0.002
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.001
+:MIXT "ICRU46_Lung Adult (healthy) (inflated)" 0.26 9
+  G4_H 0.103
+  G4_C 0.105
+  G4_O 0.031
+  G4_N 0.749
+  G4_Na 0.002
+  G4_P 0.002
+  G4_S 0.003
+  G4_Cl 0.003
+  G4_K 0.002
+:MIXT "ICRU46_Lung Adult (congested)" 1.04 9
+  G4_H 0.105
+  G4_C 0.083
+  G4_O 0.023
+  G4_N 0.779
+  G4_Na 0.002
+  G4_P 0.001
+  G4_S 0.002
+  G4_Cl 0.003
+  G4_K 0.002
+:MIXT "ICRU46_Lymph Adult" 1.03 7
+  G4_H 0.108
+  G4_C 0.041
+  G4_O 0.011
+  G4_N 0.832
+  G4_Na 0.003
+  G4_S 0.001
+  G4_Cl 0.004
+:MIXT "ICRU46_Muscle (skeletal) Fetus (15 weeks)" 1.03 9
+  G4_H 0.108
+  G4_C 0.049
+  G4_O 0.013
+  G4_N 0.821
+  G4_Na 0.002
+  G4_P 0.001
+  G4_S 0.001
+  G4_Cl 0.003
+  G4_K 0.002
+:MIXT "ICRU46_Muscle (skeletal) Newborn" 1.05 9
+  G4_H 0.104
+  G4_C 0.103
+  G4_O 0.024
+  G4_N 0.762
+  G4_Na 0.001
+  G4_P 0.001
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Muscle (skeletal) Infant (3 months)" 1.05 9
+  G4_H 0.103
+  G4_C 0.112
+  G4_O 0.029
+  G4_N 0.748
+  G4_Na 0.001
+  G4_P 0.001
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Muscle (skeletal) Adult" 1.05 9
+  G4_H 0.102
+  G4_C 0.143
+  G4_O 0.034
+  G4_N 0.71
+  G4_Na 0.001
+  G4_P 0.002
+  G4_S 0.003
+  G4_Cl 0.001
+  G4_K 0.004
+:MIXT "ICRU46_Ovary Adult" 1.05 9
+  G4_H 0.105
+  G4_C 0.093
+  G4_O 0.024
+  G4_N 0.768
+  G4_Na 0.002
+  G4_P 0.002
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Pancreas Adult" 1.04 9
+  G4_H 0.106
+  G4_C 0.169
+  G4_O 0.022
+  G4_N 0.694
+  G4_Na 0.002
+  G4_P 0.002
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Placenta 17-26 weeks" 1.03 9
+  G4_H 0.107
+  G4_C 0.064
+  G4_O 0.017
+  G4_N 0.805
+  G4_Na 0.002
+  G4_P 0.001
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.001
+:MIXT "ICRU46_Placenta Above 26 weeks" 1.04 9
+  G4_H 0.104
+  G4_C 0.09
+  G4_O 0.026
+  G4_N 0.772
+  G4_Na 0.002
+  G4_P 0.001
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_K 0.001
+:MIXT "ICRU46_Protein" 1.35 5
+  G4_H 0.066
+  G4_C 0.534
+  G4_O 0.17
+  G4_N 0.22
+  G4_S 0.01
+:MIXT "ICRU46_Skeleton-cartilage Adult" 1.1 8
+  G4_H 0.096
+  G4_C 0.099
+  G4_O 0.022
+  G4_N 0.744
+  G4_Na 0.005
+  G4_P 0.022
+  G4_S 0.009
+  G4_Cl 0.003
+:MIXT "ICRU46_Skeleton-cortical bone Fetus (20 weeks)" 1.43 10
+  G4_H 0.064
+  G4_C 0.128
+  G4_O 0.035
+  G4_N 0.571
+  G4_Na 0.001
+  G4_Mg 0.001
+  G4_P 0.061
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_Ca 0.135
+:MIXT "ICRU46_Skeleton-cortical bone Fetus (23 weeks)" 1.58 10
+  G4_H 0.052
+  G4_C 0.143
+  G4_O 0.039
+  G4_N 0.517
+  G4_Na 0.001
+  G4_Mg 0.001
+  G4_P 0.077
+  G4_S 0.002
+  G4_Cl 0.001
+  G4_Ca 0.167
+:MIXT "ICRU46_Skeleton-cortical bone Newborn" 1.72 10
+  G4_H 0.044
+  G4_C 0.153
+  G4_O 0.041
+  G4_N 0.477
+  G4_Na 0.001
+  G4_Mg 0.002
+  G4_P 0.085
+  G4_S 0.002
+  G4_Cl 0.001
+  G4_Ca 0.194
+:MIXT "ICRU46_Skeleton-cortical bone Infant (3 months)" 1.68 10
+  G4_H 0.047
+  G4_C 0.154
+  G4_O 0.042
+  G4_N 0.485
+  G4_Na 0.001
+  G4_Mg 0.002
+  G4_P 0.082
+  G4_S 0.002
+  G4_Cl 0.001
+  G4_Ca 0.184
+:MIXT "ICRU46_Skeleton-cortical bone Child (1 year)" 1.71 10
+  G4_H 0.045
+  G4_C 0.159
+  G4_O 0.044
+  G4_N 0.467
+  G4_Na 0.001
+  G4_Mg 0.002
+  G4_P 0.087
+  G4_S 0.003
+  G4_Cl 0.001
+  G4_Ca 0.191
+:MIXT "ICRU46_Skeleton-cortical bone Child (5 years)" 1.75 10
+  G4_H 0.043
+  G4_C 0.158
+  G4_O 0.044
+  G4_N 0.457
+  G4_Na 0.001
+  G4_Mg 0.002
+  G4_P 0.093
+  G4_S 0.003
+  G4_Cl 0.001
+  G4_Ca 0.198
+:MIXT "ICRU46_Skeleton-cortical bone Child (10 years)" 1.79 10
+  G4_H 0.04
+  G4_C 0.159
+  G4_O 0.044
+  G4_N 0.45
+  G4_Na 0.001
+  G4_Mg 0.002
+  G4_P 0.096
+  G4_S 0.003
+  G4_Cl 0.001
+  G4_Ca 0.204
+:MIXT "ICRU46_Skeleton-cortical bone Child (15 years)" 1.83 9
+  G4_H 0.038
+  G4_C 0.16
+  G4_O 0.044
+  G4_N 0.443
+  G4_Na 0.001
+  G4_Mg 0.002
+  G4_P 0.099
+  G4_S 0.003
+  G4_Ca 0.21
+:MIXT "ICRU46_Skeleton-cortical bone Adult" 1.92 9
+  G4_H 0.034
+  G4_C 0.155
+  G4_O 0.042
+  G4_N 0.435
+  G4_Na 0.001
+  G4_Mg 0.002
+  G4_P 0.103
+  G4_S 0.003
+  G4_Ca 0.225
+:MIXT "ICRU46_Skeleton-cranium (whole) Adult" 1.61 9
+  G4_H 0.05
+  G4_C 0.212
+  G4_O 0.04
+  G4_N 0.435
+  G4_Na 0.001
+  G4_Mg 0.002
+  G4_P 0.081
+  G4_S 0.003
+  G4_Ca 0.176
+:MIXT "ICRU46_Skeleton-femur (whole) Fetus (20 weeks)" 1.12 9
+  G4_H 0.095
+  G4_C 0.075
+  G4_O 0.02
+  G4_N 0.754
+  G4_Na 0.002
+  G4_P 0.016
+  G4_S 0.001
+  G4_Cl 0.003
+  G4_Ca 0.034
+:MIXT "ICRU46_Skeleton-femur (whole) Newborn" 1.18 10
+  G4_H 0.087
+  G4_C 0.105
+  G4_O 0.025
+  G4_N 0.691
+  G4_Na 0.002
+  G4_Mg 0.001
+  G4_P 0.026
+  G4_S 0.001
+  G4_Cl 0.003
+  G4_Ca 0.059
+:MIXT "ICRU46_Skeleton-femur (whole) Infant (6 months)" 1.19 10
+  G4_H 0.086
+  G4_C 0.125
+  G4_O 0.032
+  G4_N 0.668
+  G4_Na 0.002
+  G4_Mg 0.001
+  G4_P 0.026
+  G4_S 0.001
+  G4_Cl 0.003
+  G4_Ca 0.056
+:MIXT "ICRU46_Skeleton-femur (whole) Child (2 years)" 1.21 10
+  G4_H 0.082
+  G4_C 0.201
+  G4_O 0.033
+  G4_N 0.575
+  G4_Na 0.002
+  G4_Mg 0.001
+  G4_P 0.032
+  G4_S 0.002
+  G4_Cl 0.003
+  G4_Ca 0.069
+:MIXT "ICRU46_Skeleton-femur (whole) Child (10 years)" 1.27 10
+  G4_H 0.076
+  G4_C 0.294
+  G4_O 0.039
+  G4_N 0.454
+  G4_Na 0.001
+  G4_Mg 0.001
+  G4_P 0.042
+  G4_S 0.002
+  G4_Cl 0.001
+  G4_Ca 0.09
+:MIXT "ICRU46_Skeleton-femur (whole) Child (15 years)" 1.32 10
+  G4_H 0.07
+  G4_C 0.332
+  G4_O 0.038
+  G4_N 0.394
+  G4_Na 0.001
+  G4_Mg 0.001
+  G4_P 0.051
+  G4_S 0.002
+  G4_Cl 0.001
+  G4_Ca 0.11
+:MIXT "ICRU46_Skeleton-femur (whole) Adult (30 years)" 1.33 10
+  G4_H 0.07
+  G4_C 0.345
+  G4_O 0.028
+  G4_N 0.368
+  G4_Na 0.001
+  G4_Mg 0.001
+  G4_P 0.055
+  G4_S 0.002
+  G4_Cl 0.001
+  G4_Ca 0.129
+:MIXT "ICRU46_Skeleton-femur (whole) Adult (90 years)" 1.22 10
+  G4_H 0.079
+  G4_C 0.385
+  G4_O 0.022
+  G4_N 0.362
+  G4_Na 0.001
+  G4_Mg 0.001
+  G4_P 0.044
+  G4_S 0.001
+  G4_Cl 0.001
+  G4_Ca 0.104
+:MIXT "ICRU46_Skeleton-humerus (whole) Adult" 1.46 9
+  G4_H 0.06
+  G4_C 0.314
+  G4_O 0.031
+  G4_N 0.369
+  G4_Na 0.001
+  G4_Mg 0.001
+  G4_P 0.07
+  G4_S 0.002
+  G4_Ca 0.152
+:MIXT "ICRU46_Skeleton-mandible (whole) Adult" 1.68 9
+  G4_H 0.046
+  G4_C 0.199
+  G4_O 0.041
+  G4_N 0.435
+  G4_Na 0.001
+  G4_Mg 0.002
+  G4_P 0.086
+  G4_S 0.003
+  G4_Ca 0.187
+:MIXT "ICRU46_Skeleton-red marrow Adult" 1.03 9
+  G4_H 0.105
+  G4_C 0.414
+  G4_O 0.034
+  G4_N 0.439
+  G4_P 0.001
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_K 0.002
+  G4_Fe 0.001
+:MIXT "ICRU46_Skeleton-ribs (2nd, 6th) (whole) Adult" 1.41 11
+  G4_H 0.064
+  G4_C 0.263
+  G4_O 0.039
+  G4_N 0.436
+  G4_Na 0.001
+  G4_Mg 0.001
+  G4_P 0.06
+  G4_S 0.003
+  G4_Cl 0.001
+  G4_K 0.001
+  G4_Ca 0.131
+:MIXT "ICRU46_Skeleton-ribs (lOth) (whole) Adult" 1.52 11
+  G4_H 0.056
+  G4_C 0.235
+  G4_O 0.04
+  G4_N 0.434
+  G4_Na 0.001
+  G4_Mg 0.001
+  G4_P 0.072
+  G4_S 0.003
+  G4_Cl 0.001
+  G4_K 0.001
+  G4_Ca 0.156
+:MIXT "ICRU46_Skeleton-sacrum (whole) Adult-male" 1.29 11
+  G4_H 0.074
+  G4_C 0.302
+  G4_O 0.037
+  G4_N 0.438
+  G4_Mg 0.001
+  G4_P 0.045
+  G4_S 0.002
+  G4_Cl 0.001
+  G4_K 0.001
+  G4_Ca 0.098
+  G4_Fe 0.001
+:MIXT "ICRU46_Skeleton-sacrum (whole) Adult-female" 1.39 11
+  G4_H 0.066
+  G4_C 0.271
+  G4_O 0.038
+  G4_N 0.435
+  G4_Na 0.001
+  G4_Mg 0.001
+  G4_P 0.058
+  G4_S 0.003
+  G4_Cl 0.001
+  G4_K 0.001
+  G4_Ca 0.125
+:MIXT "ICRU46_Skeleton-spongiosa Adult" 1.18 12
+  G4_H 0.085
+  G4_C 0.404
+  G4_O 0.028
+  G4_N 0.367
+  G4_Na 0.001
+  G4_Mg 0.001
+  G4_P 0.034
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_K 0.001
+  G4_Ca 0.074
+  G4_Fe 0.001
+:MIXT "ICRU46_Skeleton-vertebral column (C4) (whole) Adult" 1.42 11
+  G4_H 0.063
+  G4_C 0.261
+  G4_O 0.039
+  G4_N 0.436
+  G4_Na 0.001
+  G4_Mg 0.001
+  G4_P 0.061
+  G4_S 0.003
+  G4_Cl 0.001
+  G4_K 0.001
+  G4_Ca 0.133
+:MIXT "ICRU46_Skeleton-vertebral column (D6, L3) (whole) Adult" 1.33 11
+  G4_H 0.07
+  G4_C 0.287
+  G4_O 0.038
+  G4_N 0.437
+  G4_Mg 0.001
+  G4_P 0.051
+  G4_S 0.002
+  G4_Cl 0.001
+  G4_K 0.001
+  G4_Ca 0.111
+  G4_Fe 0.001
+:MIXT "ICRU46_Skeleton-yellow marrow Adult" 0.98 7
+  G4_H 0.115
+  G4_C 0.644
+  G4_O 0.007
+  G4_N 0.231
+  G4_Na 0.001
+  G4_S 0.001
+  G4_Cl 0.001
+:MIXT "ICRU46_Skin Fetus (14 weeks)" 1.02 9
+  G4_H 0.108
+  G4_C 0.051
+  G4_O 0.012
+  G4_N 0.821
+  G4_Na 0.002
+  G4_P 0.001
+  G4_S 0.001
+  G4_Cl 0.003
+  G4_K 0.001
+:MIXT "ICRU46_Skin Newborn" 1.05 9
+  G4_H 0.104
+  G4_C 0.104
+  G4_O 0.028
+  G4_N 0.755
+  G4_Na 0.002
+  G4_P 0.001
+  G4_S 0.002
+  G4_Cl 0.003
+  G4_K 0.001
+:MIXT "ICRU46_Skin Adult" 1.09 9
+  G4_H 0.1
+  G4_C 0.204
+  G4_O 0.042
+  G4_N 0.645
+  G4_Na 0.002
+  G4_P 0.001
+  G4_S 0.002
+  G4_Cl 0.003
+  G4_K 0.001
+:MIXT "ICRU46_Spleen Fetus (26-40 weeks)" 1.04 9
+  G4_H 0.105
+  G4_C 0.086
+  G4_O 0.024
+  G4_N 0.776
+  G4_Na 0.002
+  G4_P 0.002
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Spleen Adult" 1.06 9
+  G4_H 0.103
+  G4_C 0.113
+  G4_O 0.032
+  G4_N 0.741
+  G4_Na 0.001
+  G4_P 0.003
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_K 0.003
+:MIXT "ICRU46_Testis Adult" 1.04 9
+  G4_H 0.106
+  G4_C 0.099
+  G4_O 0.02
+  G4_N 0.766
+  G4_Na 0.002
+  G4_P 0.001
+  G4_S 0.002
+  G4_Cl 0.002
+  G4_K 0.002
+:MIXT "ICRU46_Thyroid Adult" 1.05 10
+  G4_H 0.104
+  G4_C 0.119
+  G4_O 0.024
+  G4_N 0.745
+  G4_Na 0.002
+  G4_P 0.001
+  G4_S 0.001
+  G4_Cl 0.002
+  G4_K 0.001
+  G4_I 0.001
+:MIXT "ICRU46_Urinary bladder (empty) Adult" 1.04 9
+  G4_H 0.105
+  G4_C 0.096
+  G4_O 0.026
+  G4_N 0.761
+  G4_Na 0.002
+  G4_P 0.002
+  G4_S 0.002
+  G4_Cl 0.003
+  G4_K 0.003
+:MIXT "ICRU46_Urinary bladder (filled) Adult" 1.03 9
+  G4_H 0.108
+  G4_C 0.035
+  G4_O 0.015
+  G4_N 0.83
+  G4_Na 0.003
+  G4_P 0.001
+  G4_S 0.001
+  G4_Cl 0.005
+  G4_K 0.002
+:MIXT "ICRU46_Urinary (renal) stones-cystine" 1.66 5
+  G4_H 0.05
+  G4_C 0.307
+  G4_O 0.119
+  G4_N 0.265
+  G4_S 0.259
+:MIXT "ICRU46_Urinary (renal) stones-oxalate" 2.3 6
+  G4_H 0.015
+  G4_C 0.117
+  G4_O 0.005
+  G4_N 0.507
+  G4_P 0.06
+  G4_Ca 0.296
+:MIXT "ICRU46_Urinary (renal) stones-uric acid" 1.745 4
+  G4_H 0.033
+  G4_C 0.332
+  G4_O 0.299
+  G4_N 0.336

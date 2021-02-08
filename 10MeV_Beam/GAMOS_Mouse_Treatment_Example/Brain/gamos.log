@@ -1,0 +1,3842 @@
+/control/execute sd_249th_subjob_8th_parallel.in
+/gamos/random/setSeeds 1257 1506
+Gamos Random: initializing seeds from table at position 1257 and throwing 1506+1 numbers
+ GamosRandom: sees before nTries 1580049 -1915413502
+Gamos Random: First random number is 0.992803
+
+/control/verbose 0
+GmEMPhysics PhysicsList:DEFAULT = gamma-standard is registered
+GmEMPhysics PhysicsList: DEFAULT = electron-standard is registered
+GmEMPhysics PhysicsList: DEFAULT = positron-standard is registered
+200 ANGLEN_ROT -0.719918 0: 0.620249 N: -0.0996687   200 -226.868
+GmReadPhantomG4Geometry::ReadPhantomData reading nmate 0 = 0 mate G4_AIR
+GmReadPhantomG4Geometry::ReadPhantomData reading nmate 1 = 1 mate G4_LUNG_ICRP
+GmReadPhantomG4Geometry::ReadPhantomData reading nmate 2 = 2 mate G4_ADIPOSE_TISSUE_ICRP
+GmReadPhantomG4Geometry::ReadPhantomData reading nmate 3 = 3 mate G4_WATER
+GmReadPhantomG4Geometry::ReadPhantomData reading nmate 4 = 4 mate ICRU46_Muscle (skeletal) Adult
+GmReadPhantomG4Geometry::ReadPhantomData reading nmate 5 = 5 mate G4_B-100_BONE
+GmReadPhantomG4Geometry::ReadPhantomData reading nmate 6 = 6 mate G4_BONE_COMPACT_ICRU
+GmReadPhantomG4Geometry::ReadPhantomData reading nmate 7 = 7 mate ICRU46_Skeleton-cortical bone Adult
+GmReadPhantomG4Geometry::ReadPhantomData reading nmate 8 = 8 mate G4_Fe
+GmReadPhantomG4Geometry::ReadPhantomData nVoxel X/Y/Z 212 172 44
+GmReadPhantomG4Geometry::ReadPhantomData voxelDimX 0.625 offsetX -66.25
+GmReadPhantomG4Geometry::ReadPhantomData voxelDimY 0.625 offsetY -90
+GmReadPhantomG4Geometry::ReadPhantomData voxelDimZ 0.625 offsetZ 986.25
+ ReadVoxelDensities 
+GmPhysicsGammaLowEner::ConstructProcess 
+ GmVPrimitiveScorer::SetParameters: no parameters 
+DP_249th_subjob_8th_parallel
+
+### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+          DefaultRegionForTheWorld  1  1  0
+### ===  Auger cascade flag: 0
+### ===  Ignore cuts flag:   0
+
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200 keV to 100 TeV in 61 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric : Emin=    0 eV  Emax=    1 GeV  SauterGavrila Fluo
+       PhotoElectric : Emin=    1 GeV Emax=  100 TeV  SauterGavrila Fluo
+
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100 eV  to 1 MeV, 7 bins/decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 56 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+    LivermoreCompton : Emin=    0 eV  Emax=    1 GeV Fluo
+       Klein-Nishina : Emin=    1 GeV Emax=  100 TeV
+
+conv:  for gamma SubType=14 BuildTable=1
+      Lambda table from 1.022 MeV to 100 TeV, 18 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermoreConversion : Emin=    0 eV  Emax=    1 GeV
+        BetheHeitler : Emin=    1 GeV Emax=   80 GeV  ModifiedTsai
+     BetheHeitlerLPM : Emin=   80 GeV Emax=  100 TeV  ModifiedTsai
+
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100 eV  to 100 keV, 7 bins/decade, spline: 0
+      LambdaPrime table from 100 keV to 100 TeV in 63 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
+
+msc:  for e-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+eIoni:  for e-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       LowEnergyIoni : Emin=    0 eV  Emax=    1 GeV  deltaVI
+        MollerBhabha : Emin=    1 GeV Emax=  100 TeV
+
+eBrem:  for e-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           LowEnBrem : Emin=    0 eV  Emax=    1 GeV  AngularGen2BS
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+msc:  for e+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+eIoni:  for e+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+annihil:  for e+, integral:1  SubType=5 BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg : Emin=    0 eV  Emax=  100 TeV
+
+========= Table of registered couples ==============================
+
+Index : 0     used in the geometry : Yes
+ Material : G4_AIR
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes
+ Material : G4_Galactic
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 2     used in the geometry : Yes
+ Material : WPRIMCOLL700
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  34.1725 keV    e-  337.972 keV    e+  324.616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 3     used in the geometry : Yes
+ Material : G4_Be
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05172 keV    e-  109.289 keV    e+  107.83 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 4     used in the geometry : Yes
+ Material : G4_KAPTON
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.21113 keV    e-  98.8093 keV    e+  97.4901 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 5     used in the geometry : Yes
+ Material : G4_MYLAR
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.21113 keV    e-  99.4755 keV    e+  98.1475 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 6     used in the geometry : Yes
+ Material : G4_Pb
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  29.4761 keV    e-  241.522 keV    e+  231.977 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 7     used in the geometry : Yes
+ Material : WJAWS700
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  31.3139 keV    e-  331.226 keV    e+  316.006 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 8     used in the geometry : Yes
+ Material : Cerrobend
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  23.2983 keV    e-  216.9 keV    e+  211.148 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 9     used in the geometry : Yes
+ Material : G4_AIR_0.01002
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 10     used in the geometry : Yes
+ Material : G4_AIR_0.01256
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 11     used in the geometry : Yes
+ Material : G4_AIR_0.01453
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 12     used in the geometry : Yes
+ Material : G4_AIR_0.01652
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 13     used in the geometry : Yes
+ Material : G4_AIR_0.01852
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 14     used in the geometry : Yes
+ Material : G4_AIR_0.0245
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  1.08071 keV    e+  1.06108 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 15     used in the geometry : Yes
+ Material : G4_AIR_0.03434
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  1.95474 keV    e+  1.91651 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 16     used in the geometry : Yes
+ Material : G4_AIR_0.02853
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  1.40517 keV    e+  1.37885 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 17     used in the geometry : Yes
+ Material : G4_AIR_0.02651
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  1.22365 keV    e+  1.22365 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 18     used in the geometry : Yes
+ Material : G4_AIR_0.04791
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  3.45867 keV    e+  3.38531 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 19     used in the geometry : Yes
+ Material : G4_AIR_0.06962
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  6.56386 keV    e+  6.40902 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 20     used in the geometry : Yes
+ Material : G4_AIR_0.07369
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  7.12694 keV    e+  7.12694 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 21     used in the geometry : Yes
+ Material : G4_AIR_0.05793
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  4.83346 keV    e+  4.72508 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 22     used in the geometry : Yes
+ Material : G4_AIR_0.03604
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  2.11585 keV    e+  2.09482 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 23     used in the geometry : Yes
+ Material : G4_AIR_0.08158
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  8.54079 keV    e+  8.32975 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 24     used in the geometry : Yes
+ Material : G4_AIR_0.12478
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  16.7902 keV    e+  16.3217 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 25     used in the geometry : Yes
+ Material : G4_AIR_0.11869
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  15.4035 keV    e+  14.9816 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 26     used in the geometry : Yes
+ Material : G4_AIR_0.0854
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  9.08826 keV    e+  8.97409 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 27     used in the geometry : Yes
+ Material : G4_AIR_0.04615
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  3.25722 keV    e+  3.1887 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 28     used in the geometry : Yes
+ Material : G4_AIR_0.02052
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 29     used in the geometry : Yes
+ Material : G4_AIR_0.04439
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  3.06332 keV    e+  2.9994 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 30     used in the geometry : Yes
+ Material : G4_AIR_0.09342
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  10.5315 keV    e+  10.3955 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 31     used in the geometry : Yes
+ Material : G4_AIR_0.14421
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  20.7069 keV    e+  20.4047 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 32     used in the geometry : Yes
+ Material : G4_AIR_0.14258
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  20.3574 keV    e+  19.7716 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 33     used in the geometry : Yes
+ Material : G4_AIR_0.09532
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  11.0574 keV    e+  10.6316 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 34     used in the geometry : Yes
+ Material : G4_AIR_0.05005
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  3.77104 keV    e+  3.65004 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 35     used in the geometry : Yes
+ Material : G4_AIR_0.08727
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  9.54872 keV    e+  9.4272 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 36     used in the geometry : Yes
+ Material : G4_AIR_0.13671
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  19.3033 keV    e+  18.7511 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 37     used in the geometry : Yes
+ Material : G4_AIR_0.14043
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  19.7063 keV    e+  19.7063 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 38     used in the geometry : Yes
+ Material : G4_AIR_0.08916
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  9.90323 keV    e+  9.65175 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 39     used in the geometry : Yes
+ Material : G4_AIR_0.03811
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  2.32762 keV    e+  2.30417 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 40     used in the geometry : Yes
+ Material : G4_AIR_0.07555
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  7.40946 keV    e+  7.40946 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 41     used in the geometry : Yes
+ Material : G4_AIR_0.10513
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  12.8374 keV    e+  12.6651 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 42     used in the geometry : Yes
+ Material : G4_AIR_0.10116
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  11.9716 keV    e+  11.8134 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 43     used in the geometry : Yes
+ Material : G4_AIR_0.07186
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  6.93672 keV    e+  6.77139 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 44     used in the geometry : Yes
+ Material : G4_AIR_0.0522
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  4.01762 keV    e+  3.93034 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 45     used in the geometry : Yes
+ Material : G4_AIR_0.03056
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  1.57779 keV    e+  1.56272 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 46     used in the geometry : Yes
+ Material : G4_AIR_0.05398
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  4.25351 keV    e+  4.20652 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 47     used in the geometry : Yes
+ Material : G4_AIR_0.0326
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  1.78252 keV    e+  1.74809 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 48     used in the geometry : Yes
+ Material : G4_AIR_0.0423
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  2.80049 keV    e+  2.7429 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 49     used in the geometry : Yes
+ Material : G4_AIR_0.0225
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 50     used in the geometry : Yes
+ Material : G4_AIR_0.04021
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  2.55613 keV    e+  2.5043 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 51     used in the geometry : Yes
+ Material : G4_AIR_0.09728
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  11.3083 keV    e+  11.1601 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 52     used in the geometry : Yes
+ Material : G4_AIR_0.11105
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  13.8478 keV    e+  13.6599 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 53     used in the geometry : Yes
+ Material : G4_AIR_0.06594
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  5.97883 keV    e+  5.84011 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 54     used in the geometry : Yes
+ Material : G4_AIR_0.15445
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  22.5701 keV    e+  22.5701 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 55     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.25195
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  38.5665 keV    e+  38.0516 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 56     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.29498
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  42.0872 keV    e+  41.5253 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 57     used in the geometry : Yes
+ Material : G4_AIR_0.16389
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  24.519 keV    e+  24.1531 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 58     used in the geometry : Yes
+ Material : G4_AIR_0.06193
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  5.4152 keV    e+  5.29143 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 59     used in the geometry : Yes
+ Material : G4_AIR_0.13256
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  18.3415 keV    e+  17.8223 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 60     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.28087
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  40.971 keV    e+  40.6965 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 61     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.45179
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  53.6063 keV    e+  53.2472 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 62     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.49394
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  56.567 keV    e+  56.1882 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 63     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.39424
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  49.4531 keV    e+  49.1219 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 64     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.24511
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  37.7967 keV    e+  37.5436 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 65     used in the geometry : Yes
+ Material : G4_AIR_0.12277
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  16.2407 keV    e+  16.0137 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 66     used in the geometry : Yes
+ Material : G4_AIR_0.18777
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  30.0764 keV    e+  29.2528 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 67     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.4583
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  54.3316 keV    e+  53.6063 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 68     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.67871
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  67.8207 keV    e+  66.9153 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 69     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.61413
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  63.8405 keV    e+  62.9882 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 70     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.30232
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  42.9443 keV    e+  42.0872 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 71     used in the geometry : Yes
+ Material : G4_AIR_0.1523
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  22.5213 keV    e+  22.0233 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 72     used in the geometry : Yes
+ Material : G4_AIR_0.09142
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  10.2889 keV    e+  10.026 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 73     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.22364
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  35.8184 keV    e+  35.8184 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 74     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.69316
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  68.278 keV    e+  67.8207 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 75     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.68651
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  68.278 keV    e+  67.3665 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 76     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.47984
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  55.438 keV    e+  55.0667 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 77     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.27382
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  40.2884 keV    e+  39.8843 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 78     used in the geometry : Yes
+ Material : G4_AIR_0.13465
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  18.6819 keV    e+  18.4142 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 79     used in the geometry : Yes
+ Material : G4_AIR_0.13049
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  17.7476 keV    e+  17.496 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 80     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.31588
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  43.8188 keV    e+  43.2339 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 81     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.63609
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  65.1406 keV    e+  64.7043 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 82     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.5865
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  62.5663 keV    e+  61.3176 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 83     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.3519
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  46.5508 keV    e+  46.239 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 84     used in the geometry : Yes
+ Material : G4_AIR_0.19309
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  30.4834 keV    e+  30.0764 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 85     used in the geometry : Yes
+ Material : G4_AIR_0.11466
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  14.805 keV    e+  14.2045 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 86     used in the geometry : Yes
+ Material : G4_AIR_0.05579
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  4.50129 keV    e+  4.4511 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 87     used in the geometry : Yes
+ Material : G4_AIR_0.12071
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  15.9289 keV    e+  15.4889 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 88     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.30905
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  43.2339 keV    e+  42.9443 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 89     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.52231
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  58.1082 keV    e+  57.719 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 90     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.38006
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  48.7929 keV    e+  48.1415 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 91     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.21661
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  35.3402 keV    e+  34.8684 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 92     used in the geometry : Yes
+ Material : G4_AIR_0.06009
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  5.12706 keV    e+  5.01105 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 93     used in the geometry : Yes
+ Material : G4_AIR_0.07741
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  7.79558 keV    e+  7.70009 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 94     used in the geometry : Yes
+ Material : G4_AIR_0.19537
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  30.4834 keV    e+  30.4834 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 95     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.2878
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  41.5253 keV    e+  40.971 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 96     used in the geometry : Yes
+ Material : G4_AIR_0.19944
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  31.1041 keV    e+  30.6889 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 97     used in the geometry : Yes
+ Material : G4_AIR_0.10313
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  12.4812 keV    e+  12.0704 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 98     used in the geometry : Yes
+ Material : G4_AIR_0.10707
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  13.2875 keV    e+  12.9316 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 99     used in the geometry : Yes
+ Material : G4_AIR_0.06778
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  6.30341 keV    e+  6.15557 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 100     used in the geometry : Yes
+ Material : G4_AIR_0.08346
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  8.86644 keV    e+  8.64589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 101     used in the geometry : Yes
+ Material : G4_AIR_0.09921
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  11.5597 keV    e+  11.5597 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 102     used in the geometry : Yes
+ Material : G4_AIR_0.17794
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  27.4577 keV    e+  27.4577 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 103     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.26678
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  39.8843 keV    e+  39.3519 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 104     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.53646
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  59.2915 keV    e+  58.5 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 105     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.40113
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  50.4602 keV    e+  49.4531 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 106     used in the geometry : Yes
+ Material : G4_AIR_0.15787
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  23.3289 keV    e+  23.3289 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 107     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.75013
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  72.0491 keV    e+  71.0873 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 108     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.93078
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  81.8616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 109     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.89916
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  79.6904 keV    e+  78.6265 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 110     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.67116
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  67.3665 keV    e+  66.4671 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 111     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.41605
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  51.4878 keV    e+  50.8005 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 112     used in the geometry : Yes
+ Material : G4_AIR_0.20502
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  31.525 keV    e+  31.3139 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 113     used in the geometry : Yes
+ Material : G4_AIR_0.11304
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  14.2286 keV    e+  13.9392 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 114     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03724
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  86.0932 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 115     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.07123
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.24412 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 116     used in the geometry : Yes
+ Material : G4_WATER_1.00657
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.1173 keV    e-  85.2297 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 117     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.80663
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  75.0136 keV    e+  74.0121 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 118     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.52937
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  58.5 keV    e+  58.1082 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 119     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.2594
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  39.3519 keV    e+  38.8265 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 120     used in the geometry : Yes
+ Material : G4_AIR_0.16002
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  24.0844 keV    e+  23.3716 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 121     used in the geometry : Yes
+ Material : G4_WATER_1.00718
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.1173 keV    e-  85.2297 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 122     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.10239
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.26096 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 123     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.06664
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.24412 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 124     used in the geometry : Yes
+ Material : G4_WATER_0.99301
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 125     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.85609
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.03073 keV    e-  77.5769 keV    e+  76.5412 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 126     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.57908
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  61.7311 keV    e+  61.3176 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 127     used in the geometry : Yes
+ Material : G4_WATER_0.9875
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10609 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 128     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.0845
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.25251 keV    e-  85.2297 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 129     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.08018
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.25251 keV    e-  85.2297 keV    e+  84.0919 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 130     used in the geometry : Yes
+ Material : G4_WATER_0.9868
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10609 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 131     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.71436
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  70.1382 keV    e+  68.7384 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 132     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.21021
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  34.8684 keV    e+  34.5187 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 133     used in the geometry : Yes
+ Material : G4_AIR_0.06373
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  5.6474 keV    e+  5.51761 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 134     used in the geometry : Yes
+ Material : G4_AIR_0.11665
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  14.893 keV    e+  14.893 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 135     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.34465
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  46.239 keV    e+  45.6217 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 136     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.8421
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.03073 keV    e-  76.5412 keV    e+  76.0286 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 137     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02389
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 138     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04933
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  87.5518 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 139     used in the geometry : Yes
+ Material : G4_WATER_1.00901
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.1173 keV    e-  85.2297 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 140     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.44448
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  53.2472 keV    e+  52.5364 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 141     used in the geometry : Yes
+ Material : G4_AIR_0.16563
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  25.3024 keV    e+  24.5475 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 142     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.36631
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  47.8191 keV    e+  47.1807 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 143     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.8919
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05172 keV    e-  79.1567 keV    e+  78.0999 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 144     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.05796
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.23579 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 145     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.0228
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 146     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.76382
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  72.535 keV    e+  72.0491 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 147     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.40859
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  50.8005 keV    e+  50.291 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 148     used in the geometry : Yes
+ Material : G4_AIR_0.15611
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  23.293 keV    e+  22.6067 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 149     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.54353
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  59.6913 keV    e+  59.2915 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 150     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.93737
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.9692 keV    e+  81.8616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 151     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04108
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 152     used in the geometry : Yes
+ Material : G4_AIR_0.20139
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  31.3139 keV    e+  30.7922 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 153     used in the geometry : Yes
+ Material : G4_AIR_0.15017
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  22.1367 keV    e+  21.4888 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 154     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.55069
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  60.0938 keV    e+  59.6913 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 155     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.86332
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.03768 keV    e-  78.0999 keV    e+  76.5412 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 156     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.59386
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  62.9882 keV    e+  61.7311 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 157     used in the geometry : Yes
+ Material : G4_AIR_0.14638
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  21.0754 keV    e+  20.4662 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 158     used in the geometry : Yes
+ Material : G4_AIR_0.16214
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  24.4899 keV    e+  24.1225 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 159     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.46507
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  54.3316 keV    e+  53.9677 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 160     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.47241
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  55.0667 keV    e+  54.3316 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 161     used in the geometry : Yes
+ Material : G4_AIR_0.17975
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  27.8962 keV    e+  27.4714 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 162     used in the geometry : Yes
+ Material : G4_AIR_0.07932
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  8.20247 keV    e+  7.90284 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 163     used in the geometry : Yes
+ Material : G4_AIR_0.10908
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  13.3837 keV    e+  13.3837 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 164     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.42313
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  51.4878 keV    e+  51.143 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 165     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.38737
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  49.4531 keV    e+  48.7929 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 166     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.23074
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  36.7943 keV    e+  36.1813 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 167     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.6571
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  66.4671 keV    e+  66.022 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 168     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.82762
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.01697 keV    e-  76.0286 keV    e+  75.0136 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 169     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.74255
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  71.0873 keV    e+  70.1382 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 170     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.96973
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 171     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.012
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  85.5166 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 172     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.75714
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  72.0491 keV    e+  71.0873 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 173     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.43737
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  52.5364 keV    e+  52.1845 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 174     used in the geometry : Yes
+ Material : G4_AIR_0.17565
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  27.44 keV    e+  26.6112 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 175     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.62931
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  64.7043 keV    e+  63.8405 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 176     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03378
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 177     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.12016
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.26946 keV    e-  86.9654 keV    e+  86.0932 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 178     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.10672
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.26096 keV    e-  86.3829 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 179     used in the geometry : Yes
+ Material : G4_WATER_1.00595
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.1173 keV    e-  85.2297 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 180     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.1422
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.27802 keV    e-  88.1421 keV    e+  86.9654 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 181     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.1777
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.29967 keV    e-  89.3347 keV    e+  88.1421 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 182     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.1247
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.26946 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 183     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.0538
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.23579 keV    e-  84.0919 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 184     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.97512
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.01016 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 185     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.33072
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  44.8617 keV    e+  44.4118 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 186     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.77879
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  73.5164 keV    e+  72.0491 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 187     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.15564
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.28664 keV    e-  88.7364 keV    e+  86.9654 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 188     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.12901
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.27802 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 189     used in the geometry : Yes
+ Material : G4_WATER_0.99833
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 190     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.35892
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  46.8647 keV    e+  46.8647 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 191     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.84894
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.03073 keV    e-  77.3166 keV    e+  76.0286 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 192     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.11131
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.26096 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 193     used in the geometry : Yes
+ Material : G4_WATER_0.99898
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 194     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.72125
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  70.1382 keV    e+  69.6685 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 195     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.4304
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  52.1845 keV    e+  51.4878 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 196     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.09798
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.26096 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 197     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02171
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 198     used in the geometry : Yes
+ Material : G4_AIR_0.19138
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  30.2792 keV    e+  30.0764 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 199     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.95338
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 200     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.09356
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.26096 keV    e-  86.0932 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 201     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04709
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 202     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.48718
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  56.1882 keV    e+  55.438 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 203     used in the geometry : Yes
+ Material : G4_AIR_0.17352
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  26.5896 keV    e+  26.5896 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 204     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.60751
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  63.8405 keV    e+  62.9882 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 205     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01082
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  85.2297 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 206     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.11572
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.26946 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 207     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.96256
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 208     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.70036
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  68.7384 keV    e+  68.278 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 209     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.32323
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  44.4118 keV    e+  43.8188 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 210     used in the geometry : Yes
+ Material : G4_AIR_0.12684
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  17.1125 keV    e+  16.8708 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 211     used in the geometry : Yes
+ Material : G4_AIR_0.18953
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  30.0764 keV    e+  29.2566 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 212     used in the geometry : Yes
+ Material : G4_WATER_1.00962
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.1173 keV    e-  85.2297 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 213     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01723
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 214     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.87748
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0482 keV    e-  78.6265 keV    e+  77.5769 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 215     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.93457
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  81.8616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 216     used in the geometry : Yes
+ Material : G4_AIR_0.17
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  26.1469 keV    e+  25.7508 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 217     used in the geometry : Yes
+ Material : G4_AIR_0.14847
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  21.4451 keV    e+  21.1311 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 218     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.5009
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  56.9484 keV    e+  56.567 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 219     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.64312
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  66.022 keV    e+  64.7043 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 220     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.73513
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  71.0873 keV    e+  70.1382 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 221     used in the geometry : Yes
+ Material : G4_WATER_0.98252
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10609 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 222     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.9601
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.0919 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 223     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.924
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  81.0405 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 224     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.08902
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.25251 keV    e-  85.2297 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 225     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02867
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 226     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.77111
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  72.535 keV    e+  72.0491 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 227     used in the geometry : Yes
+ Material : G4_AIR_0.20316
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  31.3139 keV    e+  31.1041 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 228     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.2381
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  37.2921 keV    e+  36.7943 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 229     used in the geometry : Yes
+ Material : G4_AIR_0.18366
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  29.2435 keV    e+  28.57 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 230     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.19994
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.31284 keV    e-  91.154 keV    e+  89.3347 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 231     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.06217
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.24412 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 232     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.92002
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  80.7687 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 233     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.50834
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  57.3324 keV    e+  56.567 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 234     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.16873
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.29097 keV    e-  89.3347 keV    e+  88.1421 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 235     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.16453
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.28664 keV    e-  89.3347 keV    e+  88.1421 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 236     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01837
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 237     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.66397
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  66.9153 keV    e+  66.4671 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 238     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.37292
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  48.1415 keV    e+  47.8191 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 239     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.94464
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 240     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.15122
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.28664 keV    e-  88.1421 keV    e+  86.9654 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 241     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04618
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 242     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.13784
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.27802 keV    e-  88.1421 keV    e+  86.9654 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 243     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.14672
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.27802 keV    e-  88.1421 keV    e+  86.9654 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 244     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.97283
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 245     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.57234
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  61.3176 keV    e+  60.499 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 246     used in the geometry : Yes
+ Material : G4_AIR_0.17173
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  26.5709 keV    e+  25.7726 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 247     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.0178
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 248     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01666
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 249     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.82052
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.01697 keV    e-  76.0286 keV    e+  75.0136 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 250     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03125
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 251     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.07592
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.24412 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 252     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04203
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 253     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.72812
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  70.6112 keV    e+  69.6685 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 254     used in the geometry : Yes
+ Material : G4_AIR_0.13836
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  19.6417 keV    e+  18.9412 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 255     used in the geometry : Yes
+ Material : G4_AIR_0.19769
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  30.6889 keV    e+  30.4834 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 256     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.87039
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.04118 keV    e-  78.0999 keV    e+  77.5769 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 257     used in the geometry : Yes
+ Material : G4_WATER_1.00155
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  85.2297 keV    e+  84.0919 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 258     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.0271
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 259     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.96174
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 260     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01435
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.0932 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 261     used in the geometry : Yes
+ Material : G4_WATER_0.99963
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 262     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.83532
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.01697 keV    e-  76.0286 keV    e+  75.0136 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 263     used in the geometry : Yes
+ Material : G4_AIR_0.16785
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  25.723 keV    e+  25.334 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 264     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.33771
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  45.6217 keV    e+  45.1642 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 265     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.97436
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 266     used in the geometry : Yes
+ Material : G4_WATER_0.98396
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10609 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 267     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.81341
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  75.0136 keV    e+  74.0121 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 268     used in the geometry : Yes
+ Material : G4_AIR_0.12845
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  17.4205 keV    e+  17.1738 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 269     used in the geometry : Yes
+ Material : G4_AIR_0.18592
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  29.2486 keV    e+  28.7999 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 270     used in the geometry : Yes
+ Material : G4_AIR_0.18147
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  28.7837 keV    e+  27.907 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 271     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.96658
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 272     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02005
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 273     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.91298
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  80.2277 keV    e+  79.1567 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 274     used in the geometry : Yes
+ Material : G4_WATER_0.98467
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10609 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 275     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.91754
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  80.2277 keV    e+  79.1567 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 276     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.05066
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.23579 keV    e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 277     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02763
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 278     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.20885
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.31284 keV    e-  91.154 keV    e+  89.3347 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 279     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.55798
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  60.499 keV    e+  59.6913 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 280     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.25774
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.3306 keV    e-  93.0104 keV    e+  91.7686 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 281     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.2179
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.31284 keV    e-  91.7686 keV    e+  89.9371 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 282     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04013
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 283     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.79273
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  74.0121 keV    e+  73.5164 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 284     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.62191
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  64.7043 keV    e+  63.8405 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 285     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.70718
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  69.6685 keV    e+  68.278 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 286     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.16016
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.28664 keV    e-  89.3347 keV    e+  87.5518 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 287     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.65001
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  66.4671 keV    e+  65.1406 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 288     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.56513
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  61.3176 keV    e+  60.499 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 289     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01949
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 290     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.97587
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.01016 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 291     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02335
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 292     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04754
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  87.5518 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 293     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03428
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 294     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.92301
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  80.7687 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 295     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.92693
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  81.8616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 296     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.95593
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 297     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.93174
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  81.8616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 298     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.51541
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  58.1082 keV    e+  57.3324 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 299     used in the geometry : Yes
+ Material : G4_AIR_0.20638
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  31.7376 keV    e+  31.3139 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 300     used in the geometry : Yes
+ Material : G4_WATER_0.99097
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 301     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.94104
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  993.332 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 302     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03577
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.5166 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 303     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04664
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 304     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.93269
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  81.8616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 305     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.1868
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.30405 keV    e-  89.9371 keV    e+  88.7364 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 306     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02226
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 307     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02551
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 308     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.21351
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.31284 keV    e-  91.154 keV    e+  89.9371 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 309     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.23529
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.3306 keV    e-  91.7686 keV    e+  91.154 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 310     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04249
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 311     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.88485
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05172 keV    e-  79.1567 keV    e+  78.0999 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 312     used in the geometry : Yes
+ Material : G4_WATER_0.99636
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 313     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.20441
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.31284 keV    e-  91.154 keV    e+  89.3347 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 314     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04156
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 315     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.79985
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  74.5111 keV    e+  73.5164 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 316     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.17346
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.29967 keV    e-  89.3347 keV    e+  88.1421 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 317     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03675
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  86.0932 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 318     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.92498
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  81.587 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 319     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.78539
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  74.0121 keV    e+  72.535 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 320     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.60061
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  62.9882 keV    e+  62.5663 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 321     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.92983
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  81.8616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 322     used in the geometry : Yes
+ Material : G4_WATER_0.99503
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 323     used in the geometry : Yes
+ Material : G4_WATER_0.99028
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 324     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.92202
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  80.7687 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 325     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.95927
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.0919 keV    e+  82.9692 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 326     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02971
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 327     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.95677
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  83.5287 keV    e+  82.9692 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 328     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.96337
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 329     used in the geometry : Yes
+ Material : G4_WATER_1.00533
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.1173 keV    e-  85.2297 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 330     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.19561
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.30405 keV    e-  89.9371 keV    e+  89.3347 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 331     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03528
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.5166 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 332     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02443
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 333     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02919
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 334     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.13342
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.27802 keV    e-  88.1421 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 335     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01377
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.0932 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 336     used in the geometry : Yes
+ Material : G4_WATER_1.0084
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.1173 keV    e-  85.2297 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 337     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.18222
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.30405 keV    e-  89.3347 keV    e+  88.1421 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 338     used in the geometry : Yes
+ Material : G4_WATER_0.99234
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 339     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.92887
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  81.8616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 340     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.96092
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 341     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.97051
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 342     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01318
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.0932 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 343     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.97206
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 344     used in the geometry : Yes
+ Material : G4_WATER_1.00283
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  85.2297 keV    e+  84.0919 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 345     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04435
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 346     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.9736
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 347     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.94819
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 348     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03626
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.5166 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 349     used in the geometry : Yes
+ Material : G4_LUNG_ICRP_0.90625
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  80.2277 keV    e+  79.1567 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 350     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.94906
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 351     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03918
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 352     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01141
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  85.5166 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 353     used in the geometry : Yes
+ Material : G4_WATER_0.98539
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10609 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 354     used in the geometry : Yes
+ Material : G4_WATER_0.98179
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10609 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 355     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.97737
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.01016 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 356     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.95509
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 357     used in the geometry : Yes
+ Material : G4_WATER_0.99702
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 358     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.0206
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 359     used in the geometry : Yes
+ Material : G4_WATER_0.9882
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 360     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.96418
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 361     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.93829
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  993.332 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 362     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.93551
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.9692 keV    e+  81.8616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 363     used in the geometry : Yes
+ Material : G4_WATER_1.00346
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  85.2297 keV    e+  84.0919 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 364     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.22216
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.32169 keV    e-  91.7686 keV    e+  89.9371 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 365     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.22683
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.32169 keV    e-  91.7686 keV    e+  90.2398 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 366     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.28845
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.34861 keV    e-  94.2689 keV    e+  93.0104 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 367     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.28435
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.34861 keV    e-  94.2689 keV    e+  93.0104 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 368     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.27112
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.33958 keV    e-  94.2689 keV    e+  92.3874 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 369     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.26667
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.33958 keV    e-  93.0104 keV    e+  91.7686 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 370     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01022
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  85.2297 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 371     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.23982
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.3306 keV    e-  92.3874 keV    e+  91.154 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 372     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03821
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  86.0932 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 373     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.19121
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.30405 keV    e-  89.9371 keV    e+  89.3347 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 374     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.97129
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 375     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.93921
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  993.332 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 376     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03966
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 377     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.0126
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  85.5166 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 378     used in the geometry : Yes
+ Material : G4_WATER_0.9889
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 379     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.95761
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.0919 keV    e+  82.9692 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 380     used in the geometry : Yes
+ Material : G4_WATER_0.9796
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.09868 keV    e-  84.0919 keV    e+  82.9692 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 381     used in the geometry : Yes
+ Material : G4_WATER_1.0078
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.1173 keV    e-  85.2297 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 382     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.94642
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 383     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03227
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 384     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.94195
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  993.332 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 385     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04343
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 386     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.0387
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 387     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03328
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 388     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02657
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 389     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04481
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 390     used in the geometry : Yes
+ Material : G4_WATER_1.00027
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 391     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.96578
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 392     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02604
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 393     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03773
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  86.0932 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 394     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04389
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 395     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02497
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 396     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.95424
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 397     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01493
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 398     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.97662
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.01016 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 399     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.25323
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.3306 keV    e-  93.0104 keV    e+  91.7686 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 400     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.24886
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.3306 keV    e-  93.0104 keV    e+  91.7686 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 401     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.29276
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.34861 keV    e-  94.2689 keV    e+  93.0104 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 402     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.36856
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.38535 keV    e-  98.1475 keV    e+  96.8372 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 403     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.33761
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.37607 keV    e-  96.8372 keV    e+  94.9045 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 404     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.37761
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.38535 keV    e-  98.1475 keV    e+  96.8372 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 405     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04977
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  87.5518 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 406     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03478
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 407     used in the geometry : Yes
+ Material : G4_WATER_0.99369
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 408     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04844
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  87.5518 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 409     used in the geometry : Yes
+ Material : G4_WATER_1.00408
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.1173 keV    e-  85.2297 keV    e+  84.0919 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 410     used in the geometry : Yes
+ Material : G4_WATER_0.99767
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 411     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.96895
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 412     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01609
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 413     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.9279
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  81.8616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 414     used in the geometry : Yes
+ Material : G4_WATER_0.98106
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.09868 keV    e-  84.6589 keV    e+  82.9692 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 415     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04061
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 416     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04527
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 417     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.94994
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 418     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.96737
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 419     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01893
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 420     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03074
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 421     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.94285
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 422     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04799
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  87.5518 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 423     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04888
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  87.5518 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 424     used in the geometry : Yes
+ Material : G4_WATER_0.99569
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 425     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.27992
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.34861 keV    e-  94.2689 keV    e+  93.0104 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 426     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.24442
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.3306 keV    e-  93.0104 keV    e+  91.7686 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 427     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.27557
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.34861 keV    e-  94.2689 keV    e+  93.0104 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 428     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.31939
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.36227 keV    e-  96.1886 keV    e+  94.2689 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 429     used in the geometry : Yes
+ Material : G4_WATER_0.99165
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 430     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.93363
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  81.8616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 431     used in the geometry : Yes
+ Material : G4_WATER_1.00219
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  85.2297 keV    e+  84.0919 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 432     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.01551
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 433     used in the geometry : Yes
+ Material : G4_WATER_0.98033
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.09868 keV    e-  84.0919 keV    e+  82.9692 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 434     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04296
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 435     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03176
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 436     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.94375
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 437     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.95167
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 438     used in the geometry : Yes
+ Material : G4_WATER_1.00092
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  85.2297 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 439     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.93644
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.9692 keV    e+  81.8616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 440     used in the geometry : Yes
+ Material : G4_WATER_0.98959
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 441     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.91902
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  80.7687 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 442     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.95844
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.0919 keV    e+  82.9692 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 443     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.97812
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.01016 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 444     used in the geometry : Yes
+ Material : G4_WATER_1.00471
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.1173 keV    e-  85.2297 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 445     used in the geometry : Yes
+ Material : G4_WATER_0.99436
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 446     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.04573
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.07314 keV    e-  86.9654 keV    e+  86.3829 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 447     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.92102
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  80.7687 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 448     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.97886
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.01016 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 449     used in the geometry : Yes
+ Material : G4_WATER_0.9861
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10609 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 450     used in the geometry : Yes
+ Material : G4_WATER_0.98324
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10609 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 451     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03023
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 452     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.96816
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 453     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02815
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 454     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.92596
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  82.4135 keV    e+  81.587 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 455     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.96498
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.0034 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 456     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.02116
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05881 keV    e-  86.3829 keV    e+  84.6589 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 457     used in the geometry : Yes
+ Material : ICRU46_Muscle (skeletal) Adult_1.03278
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.06595 keV    e-  86.9654 keV    e+  85.2297 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 458     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.9508
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 459     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.94731
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 460     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.94554
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 461     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.95253
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  996.675 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 462     used in the geometry : Yes
+ Material : G4_ADIPOSE_TISSUE_ICRP_0.94013
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  993.332 eV     e-  83.5287 keV    e+  82.4135 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 463     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.23103
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.32169 keV    e-  91.7686 keV    e+  91.154 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 464     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.26229
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.33958 keV    e-  93.0104 keV    e+  91.7686 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 465     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.32445
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.36227 keV    e-  96.1886 keV    e+  94.2689 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 466     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.29748
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.34861 keV    e-  94.9045 keV    e+  93.0104 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 467     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.30177
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.3577 keV    e-  94.9045 keV    e+  93.6375 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 468     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.31547
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.3577 keV    e-  95.866 keV    e+  94.2689 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 469     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.30627
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.3577 keV    e-  94.9045 keV    e+  94.2689 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 470     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.40344
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.40409 keV    e-  99.4755 keV    e+  98.1475 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 471     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.37293
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.38535 keV    e-  98.1475 keV    e+  96.8372 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 472     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.36418
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.38535 keV    e-  98.1475 keV    e+  96.1886 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 473     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.36076
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.38535 keV    e-  97.4901 keV    e+  96.1886 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 474     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.3999
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.40409 keV    e-  99.4755 keV    e+  98.1475 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 475     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.42633
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.41356 keV    e-  100.146 keV    e+  98.8093 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 476     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.46589
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.42309 keV    e-  102.186 keV    e+  100.146 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 477     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.39586
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.39469 keV    e-  99.4755 keV    e+  97.4901 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 478     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.38664
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.39469 keV    e-  98.1475 keV    e+  96.8372 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 479     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.44925
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.42309 keV    e-  101.501 keV    e+  99.4755 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 480     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.48915
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.43269 keV    e-  102.875 keV    e+  101.501 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 481     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.32896
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.37146 keV    e-  96.1886 keV    e+  94.2689 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 482     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.5201
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.50169 keV    e-  103.568 keV    e+  102.186 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 483     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.45715
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.42309 keV    e-  101.501 keV    e+  99.4755 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 484     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.46129
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.42309 keV    e-  102.186 keV    e+  100.146 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 485     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.34259
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.37607 keV    e-  96.8372 keV    e+  94.9045 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 486     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.47054
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.43269 keV    e-  102.186 keV    e+  100.146 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 487     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.51578
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.50169 keV    e-  103.568 keV    e+  102.186 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 488     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.49236
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.43751 keV    e-  102.875 keV    e+  101.501 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 489     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.4227
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.40409 keV    e-  100.146 keV    e+  98.1475 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 490     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.43469
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.41356 keV    e-  100.146 keV    e+  99.4755 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 491     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.44388
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.42309 keV    e-  101.501 keV    e+  99.4755 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 492     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.35094
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.37607 keV    e-  96.8372 keV    e+  96.1886 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 493     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.31122
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.3577 keV    e-  94.9045 keV    e+  94.2689 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 494     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.38222
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.39469 keV    e-  98.1475 keV    e+  96.8372 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 495     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.34648
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.37607 keV    e-  96.8372 keV    e+  95.2239 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 496     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.47996
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.43269 keV    e-  102.186 keV    e+  101.501 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 497     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.43958
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.41356 keV    e-  101.161 keV    e+  99.4755 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 498     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.33341
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.37607 keV    e-  96.8372 keV    e+  94.9045 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 499     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.52616
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.50169 keV    e-  103.568 keV    e+  102.186 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 500     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.57603
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.53228 keV    e-  105.677 keV    e+  104.97 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 501     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.41632
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.40409 keV    e-  99.4755 keV    e+  98.1475 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 502     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.41342
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.40409 keV    e-  99.4755 keV    e+  98.1475 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 503     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.54269
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.51182 keV    e-  104.97 keV    e+  103.568 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 504     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.55712
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.51182 keV    e-  104.97 keV    e+  103.568 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 505     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.43032
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.41356 keV    e-  100.146 keV    e+  99.4755 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 506     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.40803
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.40409 keV    e-  99.4755 keV    e+  98.1475 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 507     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.51276
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.50169 keV    e-  103.568 keV    e+  102.186 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 508     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.54968
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.51182 keV    e-  104.97 keV    e+  103.568 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 509     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.50372
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.49164 keV    e-  103.568 keV    e+  101.501 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 510     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.47425
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.43269 keV    e-  102.186 keV    e+  100.146 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 511     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.55099
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.51182 keV    e-  104.97 keV    e+  103.568 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 512     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.45375
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.42309 keV    e-  101.501 keV    e+  99.4755 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 513     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.50673
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.50169 keV    e-  103.568 keV    e+  102.186 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 514     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.38939
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.39469 keV    e-  98.1475 keV    e+  96.8372 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 515     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.35482
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.38535 keV    e-  96.8372 keV    e+  96.1886 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 516     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.51513
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.50169 keV    e-  103.568 keV    e+  102.186 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 517     used in the geometry : Yes
+ Material : G4_B-100_BONE_1.48467
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.43269 keV    e-  102.186 keV    e+  101.501 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 518     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.49771
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.49164 keV    e-  102.875 keV    e+  101.501 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 519     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.55624
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.51182 keV    e-  104.97 keV    e+  103.568 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 520     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.54443
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.51182 keV    e-  104.97 keV    e+  103.568 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 521     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.51837
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.50169 keV    e-  103.568 keV    e+  102.186 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 522     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.58709
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.53228 keV    e-  106.748 keV    e+  104.97 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 523     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.52486
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.50169 keV    e-  103.568 keV    e+  102.186 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 524     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.53007
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.50169 keV    e-  104.267 keV    e+  102.186 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 525     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.60931
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.54261 keV    e-  107.83 keV    e+  105.677 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 526     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.51751
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.50169 keV    e-  103.568 keV    e+  102.186 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 527     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.5279
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.50169 keV    e-  103.568 keV    e+  102.186 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 528     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.51104
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.50169 keV    e-  103.568 keV    e+  102.186 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 529     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.51967
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.50169 keV    e-  103.568 keV    e+  102.186 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 530     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.50157
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.49164 keV    e-  103.568 keV    e+  101.501 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 531     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.50071
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.49164 keV    e-  103.568 keV    e+  101.501 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 532     used in the geometry : Yes
+ Material : G4_BONE_COMPACT_ICRU_1.49986
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.49164 keV    e-  103.568 keV    e+  101.501 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+====================================================================
+
+ %%% EVENT 0 NTRACKS 74 TOTAL NTRACKS 74
+SetUnit DP_249th_subjob_8th_parallel 1e-12 Name Gy
+Graphics systems deleted.
+Visualization Manager deleting...

@@ -1,0 +1,167 @@
+/control/execute sd_49th_subjob_5th_parallel.in
+/gamos/random/setSeeds 1054 1103
+Gamos Random: initializing seeds from table at position 1054 and throwing 1103+1 numbers
+ GamosRandom: sees before nTries 1110916 1225340348
+Gamos Random: First random number is 0.544129
+
+/control/verbose 0
+GmEMPhysics PhysicsList:DEFAULT = gamma-standard is registered
+GmEMPhysics PhysicsList: DEFAULT = electron-standard is registered
+GmEMPhysics PhysicsList: DEFAULT = positron-standard is registered
+200 ANGLEN_ROT -0.719918 0: 0.620249 N: -0.0996687   200 -226.868
+ G4tgrPhantomPlaceParameterisation 0x555f4012bf40 PHANTOM
+GmPhysicsGammaLowEner::ConstructProcess 
+ GmVPrimitiveScorer::SetParameters: no parameters 
+DP_49th_subjob_5th_parallel
+
+### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+          DefaultRegionForTheWorld  1  1  0
+### ===  Auger cascade flag: 0
+### ===  Ignore cuts flag:   0
+
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200 keV to 100 TeV in 61 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric : Emin=    0 eV  Emax=    1 GeV  SauterGavrila Fluo
+       PhotoElectric : Emin=    1 GeV Emax=  100 TeV  SauterGavrila Fluo
+
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100 eV  to 1 MeV, 7 bins/decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 56 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+    LivermoreCompton : Emin=    0 eV  Emax=    1 GeV Fluo
+       Klein-Nishina : Emin=    1 GeV Emax=  100 TeV
+
+conv:  for gamma SubType=14 BuildTable=1
+      Lambda table from 1.022 MeV to 100 TeV, 18 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermoreConversion : Emin=    0 eV  Emax=    1 GeV
+        BetheHeitler : Emin=    1 GeV Emax=   80 GeV  ModifiedTsai
+     BetheHeitlerLPM : Emin=   80 GeV Emax=  100 TeV  ModifiedTsai
+
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100 eV  to 100 keV, 7 bins/decade, spline: 0
+      LambdaPrime table from 100 keV to 100 TeV in 63 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
+
+msc:  for e-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+eIoni:  for e-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       LowEnergyIoni : Emin=    0 eV  Emax=    1 GeV  deltaVI
+        MollerBhabha : Emin=    1 GeV Emax=  100 TeV
+
+eBrem:  for e-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           LowEnBrem : Emin=    0 eV  Emax=    1 GeV  AngularGen2BS
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+msc:  for e+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+eIoni:  for e+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+annihil:  for e+, integral:1  SubType=5 BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg : Emin=    0 eV  Emax=  100 TeV
+
+========= Table of registered couples ==============================
+
+Index : 0     used in the geometry : Yes
+ Material : G4_AIR
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes
+ Material : G4_Galactic
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 2     used in the geometry : Yes
+ Material : WPRIMCOLL700
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  34.1725 keV    e-  337.972 keV    e+  324.616 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 3     used in the geometry : Yes
+ Material : G4_Be
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.05172 keV    e-  109.289 keV    e+  107.83 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 4     used in the geometry : Yes
+ Material : G4_KAPTON
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.21113 keV    e-  98.8093 keV    e+  97.4901 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 5     used in the geometry : Yes
+ Material : G4_MYLAR
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.21113 keV    e-  99.4755 keV    e+  98.1475 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 6     used in the geometry : Yes
+ Material : G4_Pb
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  29.4761 keV    e-  241.522 keV    e+  231.977 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 7     used in the geometry : Yes
+ Material : WJAWS700
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  31.3139 keV    e-  331.226 keV    e+  316.006 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 8     used in the geometry : Yes
+ Material : Cerrobend
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  23.2983 keV    e-  216.9 keV    e+  211.148 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 9     used in the geometry : Yes
+ Material : G4_WATER
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 100 um 
+ Energy thresholds :  gamma  1.10981 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+====================================================================
+
+ %%% EVENT 0 NTRACKS 33 TOTAL NTRACKS 33SSetUnit DP_49th_subjob_5th_parallel 1e-12 Name Gy
+Graphics systems deleted.
+Visualization Manager deleting...

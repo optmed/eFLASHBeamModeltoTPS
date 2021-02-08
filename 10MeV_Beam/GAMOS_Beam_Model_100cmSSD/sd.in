@@ -1,0 +1,51 @@
+# RANDOMIZE RESULTS
+/gamos/random/setSeeds 1001 1001
+
+# SET SIMULATION GLOBAL VARIABLES
+/control/verbose 0
+/run/verbose 0
+/gamos/analysis/fileFormat CSV
+
+# READ GEOMETRY FROM TEXT FILE
+/gamos/setParam GmGeometryFromText:FileName world.geom
+/gamos/geometry GmGeometryFromText
+
+# DECLARE BASIC EM PHYSICS PROCESSES
+/gamos/physicsList GmEMPhysics
+/run/initialize
+
+/gamos/setParam GmScoringUA:FirstEvent 1
+/gamos/setParam GmScoringUA:EachNEvent 100000
+#/gamos/setParam GmPhysicsAddCerenkov:TrackSecondariesFirst 1
+#/gamos/setParam	G4OpCerenkov:Method	interpolate
+#/gamos/physics/addPhysics cerenkov
+#/gamos/physics/addPhysics tissue-optics
+
+# ADD SIMULATION SOURCE
+/gamos/generator GmGenerator
+/gamos/generator/addSingleParticleSource mySource e- 10.0*MeV
+/gamos/generator/energyDist mySource GmGenerDistEnergyGaussian 10.0*MeV 0.5*MeV
+#/gamos/generator/positionDist mySource GmGenerDistPositionLineGaussian 180.0*deg 0.06369967725*cm 0.0*cm 0.0*cm 0.0*cm 0.0 0.0 -1.0
+/gamos/generator/positionDist mySource GmGenerDistPositionDiscGaussian 0.5*mm 0 0 0 0 0 1
+#/gamos/generator/directionDist mySource GmGenerDistDirectionConst 0.0 0.0 1.0
+/gamos/generator/directionDist mySource GmGenerDistDirectionCone 0 0 1 3.9*deg
+#/gamos/generator/directionDist mySource GmGenerDistDirectionConeGaussian 0 0 1 3.*deg
+
+## LIST DIFFERENT DATA RECORDING MECHANISMS
+/gamos/scoring/createMFDetector detector voxel
+
+# DOSE SCORER
+/gamos/scoring/addScorer2MFD DoseScorer GmG4PSDoseDeposit detector
+/gamos/scoring/scoreErrors DoseScorer FALSE
+/gamos/scoring/printer DosePrinter GmPSPrinterCSVFile
+/gamos/scoring/addPrinter2Scorer DosePrinter DoseScorer
+#/gamos/scoring/printByEvent DosePrinter FALSE
+
+# USER ACTIONS
+/gamos/userAction GmCountTracksUA
+/gamos/setParam GmCountTracksUA:EachNEvent 100000
+#/gamos/userAction GmCountProcessesUA
+
+#/vis/scene/endOfEventAction accumulate 50000
+#/control/execute /home/rxz/GAMOS4/GAMOS.4.0.0/examples/visVRML2FILE.in
+/run/beamOn 100
